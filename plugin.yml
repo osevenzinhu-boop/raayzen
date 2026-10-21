@@ -1,0 +1,111 @@
+name: NationsWaW
+version: '2.2.5'
+main: com.nationswaw.NationsWaW
+api-version: '26.2'
+author: NationsWaW Team
+description: Sistema Geopolitico e Macroeconomico Premium
+softdepend: [LuckPerms, PlaceholderAPI, Vault]
+folia-supported: false
+
+libraries:
+  - org.xerial:sqlite-jdbc:3.46.1.3
+  - com.zaxxer:HikariCP:6.0.0
+  - com.github.ben-manes.caffeine:caffeine:3.1.8
+  - org.slf4j:slf4j-api:2.0.16
+
+commands:
+  nacao:
+    description: Menu principal da nacao
+    usage: /nacao
+    aliases: [nação, nw]
+  nation:
+    description: Menu, entrada, expulsar, alianca e tesouro
+    usage: /nation [info|entrar|expulsar|aliado|depositar|sacar] ...
+    aliases: [nacaoadmin]
+  carteira:
+    description: Carteira multi-moeda e cotacoes
+    usage: /carteira
+    aliases: [wallet, saldo]
+  economia:
+    description: Status do mercado de cambio global
+    usage: /economia [status]
+    aliases: [eco]
+  mercado:
+    description: Vender recursos para a nacao
+    usage: /mercado
+    aliases: [market, venderrecursos]
+  top:
+    description: Rankings de riqueza
+    usage: /top
+    aliases: [rank, ranking, tops]
+  cargo:
+    description: Gerenciar cargos
+    usage: /cargo [nomear|listar]
+  diplomacia:
+    description: Ver diplomacia (somente leitura)
+    usage: /diplomacia
+    aliases: [diplo]
+  guerra:
+    description: Guerra e votacoes
+    usage: /guerra [iniciar|status]
+  votar:
+    description: Votar
+    usage: /votar <id> <sim|nao>
+  moeda:
+    description: Moeda e conversao via chat
+    usage: /moeda [converter <origem> <valor> <destino>]
+  cambio:
+    description: Painel de cotacoes da sua nacao
+    usage: /cambio
+    aliases: [exchange, fx]
+  tesouro:
+    description: Ver Tesouro Nacional
+    usage: /tesouro
+    aliases: [treasury]
+  shop:
+    description: Loja da nacao
+    usage: /shop [nacao]
+    aliases: [loja]
+  vender:
+    description: Colocar item a venda
+    usage: /vender <preco_por_unidade>
+  confirmar:
+    description: Confirmar operacao pendente
+    usage: /confirmar
+  cancelar:
+    description: Cancelar operacao pendente
+    usage: /cancelar
+  mapa:
+    description: Mapa de territorio
+    usage: /mapa
+    aliases: [map, radar]
+  claim:
+    description: Claimar chunk atual
+    usage: /claim [unclaim|info]
+    aliases: [nclaim]
+  alto-falante:
+    description: Mensagem global paga
+    usage: /alto-falante <mensagem>
+    aliases: [af, global]
+  admin:
+    description: Admin NationsWaW
+    usage: /admin
+    permission: nationswaw.admin
+
+permissions:
+  nationswaw.admin:
+    default: op
+  nationswaw.nation.depositar:
+    default: false
+  nationswaw.nation.sacar:
+    default: false
+  nationswaw.president:
+    default: false
+  nationswaw.governor:
+    default: false
+  nationswaw.vote:
+    default: true
+  nationswaw.exchange:
+    default: true
+  nationswaw.shop:
+    default: true

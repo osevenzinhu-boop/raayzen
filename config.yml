@@ -1,0 +1,124 @@
+settings:
+  language: "pt_BR"
+  debug: false
+  auto-save-interval-minutes: 5
+
+nations:
+  brasil:
+    display-name: "Brasil"
+    currency: "Real"
+    symbol: "R$"
+    code: "BRL"
+    central-bank: "Banco Central do Brasil"
+    initial-treasury: 2500000
+    initial-central-bank: 2500000
+    color: "#009C3B"
+    flag-material: "LIME_BANNER"
+  japao:
+    display-name: "Japao"
+    currency: "Iene"
+    symbol: "¥"
+    code: "JPY"
+    central-bank: "Bank of Japan"
+    initial-treasury: 2500000
+    initial-central-bank: 2500000
+    color: "#BC002D"
+    flag-material: "RED_BANNER"
+  eua:
+    display-name: "Estados Unidos"
+    currency: "Dolar"
+    symbol: "$"
+    code: "USD"
+    central-bank: "Federal Reserve"
+    initial-treasury: 2500000
+    initial-central-bank: 2500000
+    color: "#3C3B6E"
+    flag-material: "BLUE_BANNER"
+  russia:
+    display-name: "Russia"
+    currency: "Rublo"
+    symbol: "₽"
+    code: "RUB"
+    central-bank: "Banco Central da Russia"
+    initial-treasury: 2500000
+    initial-central-bank: 2500000
+    color: "#D32F2F"
+    flag-material: "WHITE_BANNER"
+
+exchange:
+  initial-rate: 1.0
+  issp: 0.03
+  isdn: 0.02
+  min-rate: 0.01
+  max-rate: 100.0
+  min-amount: 1000.0
+  max-amount: 20000000.0
+  daily-limit-per-player: 0
+  anti-arbitrage: true
+
+treasury-impact:
+  enabled: true
+  critical-threshold: 1000000
+  healthy-threshold: 5000000
+  devaluation-rate-daily: 0.01
+  appreciation-rate-daily: 0.01
+  max-daily-variation: 0.05
+
+war:
+  approval-threshold: 0.70
+  voting-mode: "INDEFINITE"
+  mutual-declaration: true
+
+embargo:
+  enabled: true
+  daily-increase: 0.10
+  max-increase: 0.50
+
+shop:
+  tax-local: 0.15
+  tax-export: 0.45
+
+pvp:
+  default: false
+  war-only: true
+
+economy:
+  starting-balance: 1000.0
+
+chat-format:
+  prefix: "<gradient:#FFD700:#FFA000>[NationsWaW]</gradient>"
+  confirm-timeout-seconds: 30
+
+database:
+  type: "sqlite"
+  sqlite:
+    file: "nationswaw.db"
+  pool-size: 10
+
+messages:
+  prefix: "<gradient:#FFD700:#FFA000><bold>NationsWaW</bold></gradient> <dark_gray>»</dark_gray> "
+  no-permission: "<red>Sem permissao.</red>"
+  player-only: "<red>Apenas jogadores.</red>"
+  not-citizen: "<red>Voce nao pertence a nenhuma nacao.</red>"
+  exchange-success: "<green>Conversao realizada!</green>"
+  war-declared: "<dark_red><bold>GUERRA DECLARADA!</bold></dark_red> <red>{attacker} vs {defender}</red>"
+
+salary:
+  interval-hours: 12
+  president-percent: 0.10
+  governor-percent: 0.08
+  mayor-percent: 0.04
+  tax-percent: 0.05
+
+central-bank-withdraw:
+  limit: 100000
+  window-hours: 6
+
+jobs:
+  salary-interval-hours: 3
+  quit-cooldown-days: 3
+  salary-tax-issp: 0.10
+  salary-tax-isdn: 0.05
+  base-salary-percent: 0.05
+  max-income-upgrades: 10
+  max-salary-upgrades: 5

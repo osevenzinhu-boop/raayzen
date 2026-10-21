@@ -1,0 +1,26 @@
+# NationsWaW TAB List
+# Placeholders: %online% %player% %nation% %role% %nation_color%
+
+header:
+  - "<gradient:#FFD700:#FFA000><bold>◆ NationsWaW ◆</bold></gradient>"
+  - "<gray>Bem-vindo ao servidor</gray>"
+
+footer:
+  - "<gray>Online: <white>%online%</white></gray>"
+  - "<dark_gray>discord.gg/exemplo</dark_gray>"
+
+# Formato do nome na lista TAB (MiniMessage)
+list-name: "<gray>[%nation%]</gray> <white>%player%</white>"
+
+# Formato nametag acima da cabeça
+nametag: "<gray>[%nation%]</gray> <white>%player%</white>"
+
+# Intervalo de atualizacao do header/footer (ticks, 20 = 1s)
+update-interval-ticks: 40
+
+# Cores por nacao (legado scoreboard)
+nation-colors:
+  brasil: GREEN
+  eua: BLUE
+  japao: WHITE
+  russia: RED
